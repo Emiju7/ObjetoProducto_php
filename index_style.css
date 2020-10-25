@@ -46,6 +46,7 @@ label {
     height: 200px;
     margin: 2% 15% 2% 5%;
     padding: 15px;
+    font-size: 1.1em;
 }
 
 #description_label {
@@ -53,7 +54,7 @@ label {
 }
 
 #name {
-    width: 40%;
+    width: 38%;
 }
 
 #price,

@@ -18,15 +18,15 @@ class Producto
         $this->precio = $precio;
         $this->descripcion = $descripcion;
         $this->stock = 0;
-        $this->cod = (self::$numProductos) + substr($this->nombre, 0, 4);
+        $this->cod = (self::$numProductos) . "_" . substr($this->nombre, 0, 4);
     }
 
     public function __toString()
     {
-        return ("Codigo: $this->cod <br>" +
-            "Nombre del producto: $this->nombre <br>" +
-            "Descripción: $this->descripcion <br>" +
-            "Precio: $this->precio <br>" +
+        return ("Codigo: $this->cod <br>" .
+            "Nombre del producto: $this->nombre <br>" .
+            "Descripción: $this->descripcion <br>" .
+            "Precio: $this->precio <br>" .
             "Cantidad Stock: $this->stock <br>");
     }
 
