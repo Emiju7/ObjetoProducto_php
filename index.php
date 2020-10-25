@@ -1,3 +1,19 @@
+<?PHP
+
+/**
+ * @brief Creacion basica del objeto producto
+ * 
+ * Este programa muestra un formulario web en el cual se pediran datos referentes a la creacion de un producto
+ * si los datos estan introducidos conforme a lo programado, se realizara la creacion del objeto producto
+ * y tras esto se procedera a mostrar el valor del producto en la pagina web.
+ * 
+ * @author Emilio Luis Pareja Hinojosa @Emiju7
+ * @version 1.0
+ * @date 25/10/2020
+ *  
+ */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

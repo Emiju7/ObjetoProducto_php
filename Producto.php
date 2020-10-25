@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * @brief Objeto Producto
+ * 
+ * @author Emilio Luis Pareja Hinojosa @Emiju7
+ * @version 1.0
+ * @date 25/10/2020
+ *  
+ */
 class Producto
 {
     private static $numProductos = 0;
@@ -10,6 +18,9 @@ class Producto
     private $precio;
     private $stock;
 
+    /**
+     * Constructor del objeto Producto
+     */
     public function __construct($nombre, $precio, $descripcion)
     {
         self::$numProductos++;
@@ -21,6 +32,11 @@ class Producto
         $this->cod = (self::$numProductos) . "_" . substr($this->nombre, 0, 4);
     }
 
+    /**
+     * @brief Sobrescritura del metodo magico toString
+     * 
+     * Mostrará de una forma detallada y ordenada todos los parametros del objeto Producto
+     */
     public function __toString()
     {
         return ("Codigo: $this->cod <br>" .
@@ -31,6 +47,14 @@ class Producto
     }
 
 
+    /**
+     * @brief Sobrescritura del metodo magico set
+     * 
+     * Comparara si el nombre introducido existe en el objeto y si existe lo modifica con el valor dado
+     * 
+     * @param $name -> El nombre de la variable a modificar
+     * @param $value -> El valor nuevo de la variable
+     */
     public function __set($name, $value)
     {
         //Comprobamos si el nombre de la variable existe en el objeto
@@ -43,6 +67,13 @@ class Producto
         return false;
     }
 
+    /**
+     * @brief Sobrescritura del metodo magico get
+     * 
+     * Devuelve el valor de de la variable que coincida con el nombre dado, en caso de que coincida alguno
+     * 
+     * @param $name -> El nombre de la variable a mostrar
+     */
     public function __get($name)
     {
         //Comprobamos si el nombre de la variable existe en el objeto
